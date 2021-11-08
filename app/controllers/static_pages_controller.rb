@@ -6,4 +6,8 @@ class StaticPagesController < ApplicationController
             render 'privacy_es'
         end
     end
+
+    def current_time
+        @nighttime = (DateTime.now.hour > 17 || DateTime.now.hour < 7)
+    end
 end
